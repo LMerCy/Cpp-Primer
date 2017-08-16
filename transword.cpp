@@ -13,7 +13,7 @@ map<string,string> buildmap(ifstream &map_file)
     string value;
     while(map_file>>key && getline(map_file,value))
     {
-        if(!value.size())
+        if(value.size()>1)
             trans_map[key]=value.substr(1);    
     }
     return trans_map;
@@ -54,5 +54,6 @@ int main()
         word_transform(mapinfile,inputfile);
     else
         cerr<<"can't find the file"<<endl;
+    system("pause");
     return 0;
 }
