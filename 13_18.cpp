@@ -9,8 +9,8 @@ public:
     }
     Employee(const Employee&)=delete;
     Employee &operator=(const Employee&)=delete;
-    string name(const Employee){return myName};
-    int id(const Employee){return myId};
+    string name(const Employee){return myName;};
+    int id(const Employee){return myId;};
     ~Employee()=default;
     
 private:
